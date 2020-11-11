@@ -1,0 +1,15 @@
+{% extends 'app.html.twig' %}
+
+{% block content %}
+
+    <div class="col-12">
+
+        <h1>{{ article.title }}</h1>
+
+        <small>Écrit par : {{ article.author }} le <em>{{ article.createdAt | date('d/m/Y') }}</em></small>
+
+        <p class="mt-4">{{ article.content }}</p>
+
+    </div>
+
+{% endblock %}

@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ArticleRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
@@ -14,6 +15,7 @@ class Article
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Assert\Length(min=5, minMessage="Le titre doit faire au minimum {{ limit }} caractères.")
      */
     private $id;
 
@@ -31,6 +33,11 @@ class Article
      * @ORM\Column(type="string", length=255)
      */
     private $author;
+
+    /**
+     * @ORM\Column(type="integer", options={"default" : 0})
+     */
+    private $likes;
 
     /**
      * @ORM\Column(type="text")
@@ -85,6 +92,25 @@ class Article
     public function setAuthor(string $author): self
     {
         $this->author = $author;
+
+        return $this;
+    }
+
+    public function getLikes(): int
+    {
+        return $this->likes;
+    }
+
+    public function incrementLikes(): self
+    {
+        $this->likes++;
+
+        return $this;
+    }
+
+    public function decrementLikes(): self
+    {
+        $this->likes--;
 
         return $this;
     }

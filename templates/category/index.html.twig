@@ -1,0 +1,46 @@
+{% extends 'app.html.twig' %}
+
+{% block content %}
+
+
+    <div class="col-12">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <h2>Liste des catégories <small>({{ categories.getTotalItemCount }})</small></h2>
+                <hr class="mb-3" />
+
+            </div>
+
+            {% for category in categories %}
+
+                <div class="col-12 col-md-4 mb-5">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ category.name | u.truncate(26, '...') }}</h5>
+
+                            <p class="card-text">{{ category.description | u.truncate(100, '...') }}</p>
+                            <a href="{{ path('category.show', {id: category.id}) }}" class="btn btn-primary">Voir les articles</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <div class="col-12">
+
+        <div class="navigation">
+            {{ knp_pagination_render(categories) }}
+        </div>
+
+    </div>
+
+{% endblock %}

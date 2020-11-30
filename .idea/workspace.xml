@@ -2,15 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c61f2317-b20b-46d8-b348-5159b89cda19" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Utils/Toolbox.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/article/create.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/article/update.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/auth/login.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/auth/register.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/category/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/partials/_flash.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Utils/ToolboxTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/ArticleFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/ArticleFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/article/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/article/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_nav.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -144,7 +164,13 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Web\symfony-iut\templates\category" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -154,7 +180,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605050178326</updated>
-      <workItem from="1605050179634" duration="9611000" />
+      <workItem from="1605050179634" duration="13652000" />
+      <workItem from="1605630766992" duration="2167000" />
+      <workItem from="1605633748947" duration="25000" />
+      <workItem from="1605686583352" duration="607000" />
+      <workItem from="1605696097087" duration="599000" />
+      <workItem from="1605703318409" duration="14000" />
+      <workItem from="1606203252339" duration="719000" />
+      <workItem from="1606289119012" duration="414000" />
+      <workItem from="1606306710086" duration="6000" />
+      <workItem from="1606665340800" duration="4934000" />
+      <workItem from="1606718105670" duration="2037000" />
+      <workItem from="1606721768928" duration="5000" />
     </task>
     <servers />
   </component>
@@ -162,21 +199,25 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="753" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1605052840424">
+    <state x="753" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1606677487954">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="753" y="228" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605052840424" />
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605089613550">
+    <state x="753" y="228" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606677487954" />
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606676393535">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605089613550" />
-    <state x="773" y="242" key="NewPhpClassDialog" timestamp="1605056841251">
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606676393535" />
+    <state x="773" y="242" key="NewPhpClassDialog" timestamp="1606719574108">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="773" y="242" key="NewPhpClassDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605056841251" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1605054069809">
+    <state x="773" y="242" key="NewPhpClassDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606719574108" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1606676371552">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605054069809" />
+    <state width="498" height="446" key="SwitcherDM/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606676371552" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1606718590175">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606718590175" />
   </component>
 </project>

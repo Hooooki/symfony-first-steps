@@ -4,12 +4,71 @@
 
     <div class="col-12">
 
-        <h1>{{ article.title }}</h1>
+        <h1 data-id="{{ article.id }}">{{ article.title }}</h1>
 
         <small>Écrit par : {{ article.author }} le <em>{{ article.createdAt | date('d/m/Y') }}</em></small>
 
         <p class="mt-4">{{ article.content }}</p>
 
+        <a href="{{ path('article.edit', {id: article.id}) }}">Éditer l'article</a>
+
+        <form method="post" action="{{ path('article.delete', {id: article.id}) }}" onsubmit="return confirm('Etes-vous sûr de supprimer cet article ?')">
+
+            <input type="hidden" name="_method" value="DELETE">
+
+            <input type="hidden" name="token" value="{{ csrf_token('delete-item') }}">
+
+            <button type="submit" class="btn btn-danger" >Supprimer l'article</button>
+
+        </form>
+
+        <div class="mt-3">
+            <button id="decrement" class="btn btn-outline-dark btn-lg">👎</button>
+            <strong class="p-5">
+                <span id="likes">{{ article.likes }}</span>
+                {{ article.likes <= 1  ? 'like' : 'likes' }}
+            </strong>
+            <button id="increment" class="btn btn-outline-dark btn-lg">👍</button>
+        </div>
+
     </div>
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script>
+
+        const id = document.querySelector("h1").getAttribute("data-id");
+        const likes = document.querySelector("#likes");
+        const increment = document.querySelector("#increment");
+        const icurl = `/articles/${id}/like`;
+
+        const decrement = document.querySelector("#decrement");
+        const dcurl = `/articles/${id}/unlike`;
+
+        increment.addEventListener("click", () => {
+            increment.disabled = true;
+
+            fetch(icurl)
+                .then(res => res.json())
+                .then(res => {
+                    likes.textContent = res.likes;
+                    increment.disabled = false;
+                });
+        });
+
+        decrement.addEventListener("click", () => {
+            decrement.disabled = true;
+
+            fetch(dcurl)
+                .then(res => res.json())
+                .then(res => {
+                    likes.textContent = res.likes;
+                    decrement.disabled = false;
+                });
+        });
+
+    </script>
 
 {% endblock %}

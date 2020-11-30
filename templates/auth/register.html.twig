@@ -1,0 +1,61 @@
+{% extends 'app.html.twig' %}
+
+{% block content %}
+
+    {{ form_start(registerForm) }}
+
+    <div class="row">
+
+        <div class="col-12">
+
+            <div class="form-group">
+                <label for="user_email">Email de l'utilisateur</label>
+                {{ form_widget(registerForm.email) }}
+                <small class="text-danger">
+                    {{ form_errors(registerForm.email) }}
+                </small>
+            </div>
+
+        </div>
+
+        <div class="col-12 col-md-6">
+
+            <div class="form-group">
+                <label for="user_password">Mot de passe</label>
+                {{ form_widget(registerForm.password) }}
+                <small class="text-danger">
+                    {{ form_errors(registerForm.password) }}
+                </small>
+            </div>
+
+        </div>
+
+        <div class="col-12 col-md-6">
+
+            <div class="form-group">
+                <label for="user_confirm_password">Confirmez le mot de passe</label>
+                {{ form_widget(registerForm.confirm_password) }}
+                <small class="text-danger">
+                    {{ form_errors(registerForm.confirm_password) }}
+                </small>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Créer l'utiliateur</button>
+                <!--<a href="" class="btn btn-warning">Annuler</a>-->
+            </div>
+        </div>
+
+    </div>
+
+    {{ form_end(registerForm) }}
+
+{% endblock %}

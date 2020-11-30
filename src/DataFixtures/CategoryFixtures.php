@@ -30,6 +30,8 @@ class CategoryFixtures extends Fixture
             $category->setName($faker->randomElement($this->randomCategory));
             $category->setDescription($faker->sentence(36));
 
+            $manager->persist($category);
+
         }
 
         $manager->flush();
